@@ -68,7 +68,7 @@ html {
     justify-content: space-evenly;
     align-items: center;
     font-size: 1.2em;
-    padding: 1vw 0;
+    padding: 1.5vw 0;
   }
   
   &__iconos {
@@ -112,6 +112,9 @@ html {
   &__navlinks2 {
     margin-right: 15px;
     text-decoration: none;
+    
+    
+    
   }
   
   &__navline{
@@ -125,6 +128,9 @@ html {
   &__navbar2 {
     display: flex;
     justify-content: space-between;
+    
+    
+    
   }
   
   
@@ -132,6 +138,15 @@ html {
     margin-right: 50px;
     text-decoration: none;
     font-family: "Raleway", sans-serif;
+    color: black;
+    
+    transition: .2s ease-in-out all;
+    
+    &:hover{
+      color: $colorRosa;
+      
+    }
+    
   }
   
   
@@ -182,13 +197,15 @@ html {
   &__bannerbtn{
     width: 100%;
     
+    transition: .2s ease-in-out all;
+    
     a{
       padding: 5px 0;
       font-family: "Open Sans";
       font-style: normal;
       font-weight: bold;
       line-height: normal;
-      font-size: 24px;
+      font-size: 28px;
       
       color: $colorRosa;
       text-decoration: none;
@@ -208,7 +225,7 @@ html {
     min-height: auto;
     flex-shrink: 0;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 130px;
     
     &__izq{
       
@@ -252,7 +269,7 @@ html {
         &__btn{
           
           text-decoration: none;
-
+          
           
           
           padding-bottom: 10px;
@@ -333,9 +350,42 @@ html {
   }
   
   
+  .productos{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    min-height: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-shrink: 0;
+    
+    
+    
+    
+    &__img{
+      width: auto;
+      height: auto;
+      margin-bottom: 25px;
+      
+    }
+    
+    &__titulo{
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      font-size: 48px;
+      
+      color: #5F5F5F;
+    }
+    
+  }
   
   
-  &__curativas{
+  
+  .flores{
     
     display: flex;
     flex-direction: row;
@@ -344,18 +394,15 @@ html {
     align-content: flex-start;
     align-items: center;
     
-    margin-top: 150px;
-    width: 90%;
+    margin-top: 130px;
+    width: 100%;
     height: 100vh;
     min-height: 100vh;
+    margin-bottom: 130px;
     
-    background: red;
+    background-image: url(/images/fondo_flores.png);
+    background-size: cover;
     
-    &__img{
-      width: 60%;
-      height: 400px;
-      background: yellow;
-    }
     
     &__texto{
       width: 30%;
@@ -365,5 +412,134 @@ html {
     }
   }
   
-  
+  .novedades{
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    
+    &__tit{
+      
+      
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      min-height: auto;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-shrink: 0;
+      
+      margin-bottom: 100px;
+      
+      
+      &__img{
+        width: auto;
+        height: auto;
+        margin-bottom: 25px;
+        
+      }
+      
+      &__titulo{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        font-size: 48px;
+        
+        color: #5F5F5F;
+        
+        
+      }   
+      
+    }
+    
+    &__container{
+      
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      
+      flex-shrink: 0;
+
+      margin-bottom: 120px;
+      
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        opacity: 1;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 16px;
+        
+        color: rgba(0, 0, 0, 0.9);
+        
+        background: none;
+      }
+      .swiper-pagination-bullet-active {
+        
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        
+        color: #5F5F5F;
+        
+      }
+      
+      &-wrapper{
+        width: 100%;
+        height: 100%;
+        
+      }
+      
+      &__flower{
+        width: 100%;
+        height: 80%;
+        background-color: yellow;
+
+        display: flex;
+        flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    transition: .2s all ease-in-out;
+
+    &:hover{
+      -webkit-box-shadow: 0px 0px 9px 3px rgba(224,213,224,1);
+      -moz-box-shadow: 0px 0px 9px 3px rgba(224,213,224,1);
+      box-shadow: 0px 0px 9px 3px rgba(224,213,224,1);
+    }
+
+        
+        img{
+          width: 100%;
+        }
+
+        h3{
+          width: auto;
+        }
+        
+        
+      }
+      
+      
+    }
+    
+    
+  }
 }
+

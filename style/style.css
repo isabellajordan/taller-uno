@@ -100,7 +100,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2em;
-  padding: 1vw 0;
+  padding: 1.5vw 0;
 }
 
 .app__iconos {
@@ -177,6 +177,13 @@ html {
   margin-right: 50px;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
+  color: black;
+  -webkit-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
+}
+
+.app #signin:hover {
+  color: #FFA38F;
 }
 
 .app__bannercon {
@@ -242,6 +249,8 @@ html {
 
 .app__bannerbtn {
   width: 100%;
+  -webkit-transition: .2s ease-in-out all;
+  transition: .2s ease-in-out all;
 }
 
 .app__bannerbtn a {
@@ -250,7 +259,7 @@ html {
   font-style: normal;
   font-weight: bold;
   line-height: normal;
-  font-size: 24px;
+  font-size: 28px;
   color: #FFA38F;
   text-decoration: none;
 }
@@ -272,7 +281,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 130px;
 }
 
 .app__crasas__izq {
@@ -402,7 +411,45 @@ html {
   top: -100px;
 }
 
-.app__curativas {
+.app .productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  height: auto;
+  min-height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.app .productos__img {
+  width: auto;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.app .productos__titulo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  font-size: 48px;
+  color: #5F5F5F;
+}
+
+.app .flores {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,22 +467,158 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 150px;
-  width: 90%;
+  margin-top: 130px;
+  width: 100%;
   height: 100vh;
   min-height: 100vh;
-  background: red;
+  margin-bottom: 130px;
+  background-image: url(/images/fondo_flores.png);
+  background-size: cover;
 }
 
-.app__curativas__img {
-  width: 60%;
-  height: 400px;
-  background: yellow;
-}
-
-.app__curativas__texto {
+.app .flores__texto {
   width: 30%;
   height: 400px;
   background: blue;
+}
+
+.app .novedades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.app .novedades__tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-bottom: 100px;
+}
+
+.app .novedades__tit__img {
+  width: auto;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.app .novedades__tit__titulo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  font-size: 48px;
+  color: #5F5F5F;
+}
+
+.app .novedades__container {
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-bottom: 120px;
+}
+
+.app .novedades__container .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  opacity: 1;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.9);
+  background: none;
+}
+
+.app .novedades__container .swiper-pagination-bullet-active {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  color: #5F5F5F;
+}
+
+.app .novedades__container-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.app .novedades__container__flower {
+  width: 100%;
+  height: 80%;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out;
+}
+
+.app .novedades__container__flower:hover {
+  -webkit-box-shadow: 0px 0px 9px 3px #e0d5e0;
+  box-shadow: 0px 0px 9px 3px #e0d5e0;
+}
+
+.app .novedades__container__flower img {
+  width: 100%;
+}
+
+.app .novedades__container__flower h3 {
+  width: auto;
 }
 /*# sourceMappingURL=style.css.map */
